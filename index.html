@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Marina — Table provençale au cœur de Montauroux</title>
+<meta name="description" content="Le Marina, restaurant traditionnel provençal au cœur du vieux village de Montauroux (Var). Terrasse ombragée face à la fontaine de la rue de la Rouguière, cuisine maison à l'accent provençal. 4,8/5 sur plus de 1 100 avis Google.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C1553B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23FAF3E7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   LE MARINA — Montauroux · Feuille de style complète
+   Palette : terracotta #C1553B · crème #FAF3E7 · olive #6B7B4E
+             brun bois foncé #2E211A · doré discret #C9A227
+   ============================================================ */
+:root{
+  --terracotta:#C1553B;
+  --terracotta-dark:#A3442E;
+  --creme:#FAF3E7;
+  --creme-2:#F3E7D3;
+  --olive:#6B7B4E;
+  --olive-dark:#55633C;
+  --bois:#2E211A;
+  --bois-2:#3B2A21;
+  --or:#C9A227;
+  --encre:#2B2018;
+  --gris-texte:#5C4F42;
+  --bande-sombre:rgba(24,16,11,.78);
+  --bande-sombre-fort:rgba(24,16,11,.9);
+  --ombre-carte:0 10px 30px rgba(46,33,26,.12);
+  --ombre-carte-hover:0 18px 44px rgba(46,33,26,.2);
+  --rayon:14px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+  background:var(--creme);
+  color:var(--encre);
+  line-height:1.65;
+  font-size:17px;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--terracotta);color:#fff}
+
+.container{width:min(1160px,92%);margin-inline:auto}
+
+h1,h2,h3,.font-serif{font-family:'Playfair Display',Georgia,serif;line-height:1.18}
+h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--bois)}
+h3{font-size:1.3rem;color:var(--bois)}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:.95rem 1.9rem;border-radius:999px;
+  font-weight:700;font-size:1rem;letter-spacing:.02em;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+  cursor:pointer;border:2px solid transparent;
+}
+.btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 8px 22px rgba(193,85,59,.35)}
+.btn-primary:hover{background:var(--terracotta-dark);transform:translateY(-2px);box-shadow:0 12px 28px rgba(193,85,59,.45)}
+.btn-outline{border-color:var(--creme);color:var(--creme);background:rgba(24,16,11,.25)}
+.btn-outline:hover{background:var(--creme);color:var(--bois);transform:translateY(-2px)}
+.btn-olive{background:var(--olive);color:#fff}
+.btn-olive:hover{background:var(--olive-dark);transform:translateY(-2px)}
+
+/* ---------- Header / navigation ---------- */
+.site-header{
+  position:fixed;inset:0 0 auto 0;z-index:1000;
+  background:linear-gradient(180deg,rgba(30,20,14,.92),rgba(30,20,14,.82));
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(201,162,39,.28);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;min-height:74px;
+}
+.logo{display:flex;flex-direction:column;line-height:1.05}
+.logo a{display:flex;flex-direction:column}
+.logo strong{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.55rem;font-weight:700;color:var(--creme);letter-spacing:.02em;
+}
+.logo strong span{color:var(--or)}
+.logo small{
+  font-size:.68rem;text-transform:uppercase;letter-spacing:.32em;
+  color:rgba(250,243,231,.72);margin-top:.2rem;
+}
+.main-nav ul{display:flex;align-items:center;gap:1.7rem}
+.main-nav a{
+  color:rgba(250,243,231,.88);font-weight:600;font-size:.95rem;
+  padding:.35rem 0;position:relative;transition:color .2s ease;
+}
+.main-nav a::after{
+  content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;
+  background:var(--or);transition:width .25s ease;
+}
+.main-nav a:hover{color:#fff}
+.main-nav a:hover::after{width:100%}
+.header-tel{display:flex;align-items:center;gap:.6rem;margin-left:.4rem}
+.header-tel .tel-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--terracotta);color:#fff;font-weight:700;font-size:.92rem;
+  padding:.55rem 1.15rem;border-radius:999px;transition:background .2s ease,transform .2s ease;
+}
+.header-tel .tel-link:hover{background:var(--terracotta-dark);transform:translateY(-1px)}
+.header-tel svg{width:16px;height:16px;fill:currentColor}
+
+/* Bouton burger (ouvre le menu via la case cachée, sans JavaScript) */
+#nav-toggle{position:absolute;opacity:0;pointer-events:none}
+.burger{display:none;cursor:pointer;padding:.5rem}
+.burger span{
+  display:block;width:26px;height:3px;border-radius:2px;
+  background:var(--creme);margin:5px 0;transition:transform .3s ease,opacity .3s ease;
+}
+#nav-toggle:checked ~ .header-inner .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+#nav-toggle:checked ~ .header-inner .burger span:nth-child(2){opacity:0}
+#nav-toggle:checked ~ .header-inner .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+#nav-toggle:checked ~ .header-inner .main-nav{
+  display:block;position:absolute;top:100%;left:0;right:0;
+  background:var(--bande-sombre-fort);
+  border-bottom:1px solid rgba(201,162,39,.3);
+  padding:1.2rem 6% 1.6rem;
+}
+#nav-toggle:checked ~ .header-inner .main-nav ul{flex-direction:column;align-items:flex-start;gap:1.1rem}
+#nav-toggle:checked ~ .header-inner .main-nav a{font-size:1.05rem}
+
+/* ---------- Bandeau des avis (sous le header, fin) ---------- */
+.top-strip{
+  background:var(--bois);color:var(--creme);
+  font-size:.85rem;letter-spacing:.05em;text-align:center;
+  padding:.5rem 1rem;
+}
+.top-strip .stars{color:var(--or);letter-spacing:.15em;margin-right:.45rem}
+.top-strip strong{color:#fff}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;text-align:center;
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(24,16,11,.55) 0%,rgba(24,16,11,.35) 40%,rgba(24,16,11,.6) 100%);
+}
+.hero-band{
+  position:relative;z-index:2;
+  width:min(980px,94%);
+  background:var(--bande-sombre);
+  border:1px solid rgba(201,162,39,.35);
+  border-radius:var(--rayon);
+  padding:clamp(2.2rem,5vw,3.6rem) clamp(1.4rem,4vw,3.2rem);
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+  backdrop-filter:blur(3px);
+}
+.hero-kicker{
+  display:inline-block;
+  font-size:.78rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--or);margin-bottom:1.1rem;
+}
+.hero h1{
+  color:#fff;font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700;
+  margin-bottom:1.1rem;
+}
+.hero h1 .accent{color:var(--or)}
+.hero p{
+  color:rgba(250,243,231,.94);font-size:clamp(1rem,1.6vw,1.18rem);
+  max-width:46rem;margin:0 auto 1.6rem;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:1.6rem}
+.hero-note{
+  display:inline-flex;align-items:center;gap:.6rem;
+  color:rgba(250,243,231,.85);font-size:.92rem;
+}
+.hero-note .stars{color:var(--or);letter-spacing:.2em}
+.hero-scroll{
+  position:absolute;left:50%;bottom:1.4rem;transform:translateX(-50%);
+  z-index:2;color:rgba(250,243,231,.8);font-size:.75rem;
+  letter-spacing:.3em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+}
+.hero-scroll::after{
+  content:"";width:1px;height:34px;
+  background:linear-gradient(180deg,var(--or),transparent);
+  animation:heroLine 2.2s ease-in-out infinite;
+}
+@keyframes heroLine{0%,100%{opacity:.4;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+/* ---------- Sections génériques ---------- */
+.section{padding:clamp(4rem,8vw,6.5rem) 0}
+.section-head{max-width:44rem;margin:0 auto clamp(2.2rem,5vw,3.4rem);text-align:center}
+.kicker{
+  display:inline-block;font-size:.78rem;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:var(--terracotta);
+  margin-bottom:.7rem;
+}
+.section-head p{color:var(--gris-texte);margin-top:.9rem;font-size:1.05rem}
+.section-head .ornament{
+  display:flex;align-items:center;justify-content:center;gap:.8rem;margin-top:1.1rem;
+}
+.section-head .ornament::before,
+.section-head .ornament::after{
+  content:"";width:52px;height:1px;background:var(--or);
+}
+.section-head .ornament span{color:var(--olive);font-size:1rem}
+
+/* ---------- Spécialités ---------- */
+.specialites{background:#fff;position:relative}
+.specialites::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--terracotta),var(--or),var(--olive));
+}
+.spec-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.8rem;
+}
+.spec-card{
+  background:var(--creme);border-radius:var(--rayon);overflow:hidden;
+  box-shadow:var(--ombre-carte);border:1px solid rgba(46,33,26,.07);
+  display:flex;flex-direction:column;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.spec-card:hover{transform:translateY(-6px);box-shadow:var(--ombre-carte-hover)}
+.spec-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+.spec-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.spec-card:hover .spec-media img{transform:scale(1.06)}
+.spec-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:var(--bande-sombre);color:var(--creme);
+  font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:.4rem .8rem;border-radius:999px;border:1px solid rgba(201,162,39,.4);
+}
+.spec-body{padding:1.5rem 1.5rem 1.7rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.spec-body h3{font-size:1.35rem}
+.spec-body p{color:var(--gris-texte);font-size:.98rem}
+.spec-body .spec-lien{
+  margin-top:auto;padding-top:.8rem;
+  color:var(--terracotta);font-weight:700;font-size:.9rem;
+  letter-spacing:.04em;display:inline-flex;align-items:center;gap:.4rem;
+}
+.spec-body .spec-lien::after{content:"→";transition:transform .2s ease}
+.spec-card:hover .spec-lien::after{transform:translateX(4px)}
+.spec-note{
+  margin-top:2.6rem;text-align:center;color:var(--gris-texte);
+  font-size:.95rem;font-style:italic;
+}
+.spec-note strong{color:var(--bois);font-style:normal}
+
+/* ---------- À propos ---------- */
+.apropos{background:var(--creme);position:relative;overflow:hidden}
+.apropos::after{
+  content:"";position:absolute;right:-120px;bottom:-120px;width:340px;height:340px;
+  border-radius:50%;background:rgba(107,123,78,.1);pointer-events:none;
+}
+.apropos-grid{
+  display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2.5rem,6vw,4.5rem);
+  align-items:center;
+}
+.apropos-media{position:relative;padding-bottom:3.2rem}
+.photo-main{
+  width:82%;aspect-ratio:4/5;object-fit:cover;
+  border-radius:var(--rayon);box-shadow:var(--ombre-carte-hover);
+}
+.photo-small{
+  position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1/1;
+  object-fit:cover;border-radius:var(--rayon);
+  border:6px solid var(--creme);box-shadow:var(--ombre-carte-hover);
+}
+.apropos-badge{
+  position:absolute;top:1.2rem;right:6%;
+  background:var(--bois);color:var(--creme);
+  border:1px solid rgba(201,162,39,.5);border-radius:var(--rayon);
+  padding:.9rem 1.2rem;text-align:center;
+  box-shadow:var(--ombre-carte);
+}
+.apropos-badge .note{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.9rem;font-weight:700;color:var(--or);line-height:1;
+}
+.apropos-badge .sur{font-size:.8rem;color:rgba(250,243,231,.85)}
+.apropos-badge .etoiles{color:var(--or);letter-spacing:.18em;font-size:.85rem;margin-top:.25rem}
+.apropos-badge .nb-avis{font-size:.75rem;color:rgba(250,243,231,.75);margin-top:.15rem}
+.apropos-text .kicker{color:var(--olive)}
+.apropos-text h2{margin-bottom:1.2rem}
+.apropos-text p{color:var(--gris-texte);margin-bottom:1rem}
+.apropos-points{margin:1.4rem 0 1.7rem;display:grid;gap:.75rem}
+.apropos-points li{
+  display:flex;gap:.7rem;align-items:flex-start;
+  color:var(--encre);font-weight:600;font-size:1rem;
+}
+.apropos-points li::before{
+  content:"✓";flex:0 0 auto;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--olive);color:#fff;font-size:.8rem;font-weight:700;margin-top:.15rem;
+}
+.apropos-signature{
+  font-family:'Playfair Display',Georgia,serif;font-style:italic;
+  color:var(--bois);font-size:1.05rem;
+}
+.apropos-signature small{display:block;font-family:'Source Sans 3',sans-serif;font-style:normal;font-size:.85rem;color:var(--gris-texte);margin-top:.2rem}
+
+/* ============================================================
+   PARTIE 2 — styles des sections suivantes (déjà définis ici)
+   ============================================================ */
+
+/* ---------- Galerie ---------- */
+.galerie{background:var(--bois)}
+.galerie .section-head h2{color:var(--creme)}
+.galerie .section-head p{color:rgba(250,243,231,.78)}
+.galerie .kicker{color:var(--or)}
+.galerie-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;
+}
+.galerie-grid figure{
+  position:relative;border-radius:var(--rayon);overflow:hidden;
+  aspect-ratio:4/3;box-shadow:0 10px 26px rgba(0,0,0,.35);
+}
+.galerie-grid figure.large{grid-row:span 2;aspect-ratio:auto}
+.galerie-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.galerie-grid figure:hover img{transform:scale(1.07)}
+.galerie-grid figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(180deg,rgba(24,16,11,0),var(--bande-sombre-fort));
+  color:var(--creme);font-size:.9rem;font-weight:600;
+  padding:2.2rem 1rem .85rem;text-align:left;
+  opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease;
+}
+.galerie-grid figure:hover figcaption{opacity:1;transform:translateY(0)}
+@media (hover:none){
+  .galerie-grid figcaption{opacity:1;transform:none}
+}
+
+/* ---------- Avis ---------- */
+.avis{background:#fff}
+.avis-resume{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.4rem;
+  background:var(--creme);border:1px solid rgba(201,162,39,.35);
+  border-radius:var(--rayon);padding:1.4rem 2rem;margin-bottom:2.8rem;
+  box-shadow:var(--ombre-carte);
+}
+.avis-resume .note{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:3rem;font-weight:700;color:var(--terracotta);line-height:1;
+}
+.avis-resume .note small{font-size:1.1rem;color:var(--gris-texte);font-weight:400}
+.avis-resume .etoiles{color:var(--or);letter-spacing:.2em;font-size:1.25rem}
+.avis-resume .texte{color:var(--gris-texte);font-size:.98rem;max-width:24rem}
+.avis-resume .texte strong{color:var(--bois)}
+.avis-resume .logo-google{font-weight:700;color:var(--bois);font-size:.95rem}
+.avis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem}
+.avis-card{
+  background:var(--creme);border-radius:var(--rayon);
+  border:1px solid rgba(46,33,26,.08);
+  padding:1.8rem 1.6rem;box-shadow:var(--ombre-carte);
+  display:flex;flex-direction:column;gap:.9rem;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.avis-card:hover{transform:translateY(-5px);box-shadow:var(--ombre-carte-hover)}
+.avis-card .etoiles{color:var(--or);letter-spacing:.18em;font-size:1.05rem}
+.avis-card blockquote{
+  font-style:italic;color:var(--encre);font-size:1rem;flex:1;
+}
+.avis-card blockquote::before{content:"« "}
+.avis-card blockquote::after{content:" »"}
+.avis-card .auteur{display:flex;align-items:center;gap:.8rem}
+.avis-card .avatar{
+  width:44px;height:44px;border-radius:50%;flex:0 0 auto;
+  background:var(--olive);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:1.05rem;font-family:'Playfair Display',Georgia,serif;
+}
+.avis-card .avatar.t2{background:var(--terracotta)}
+.avis-card .avatar.t3{background:var(--bois)}
+.avis-card .auteur strong{display:block;font-size:.95rem;color:var(--bois);line-height:1.2}
+.avis-card .auteur small{color:var(--gris-texte);font-size:.8rem}
+
+/* ---------- Infos pratiques ---------- */
+.infos{background:var(--creme)}
+.infos-grid{
+  display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(2rem,5vw,3.5rem);
+  align-items:start;
+}
+.info-panel{
+  background:#fff;border-radius:var(--rayon);
+  border:1px solid rgba(46,33,26,.08);box-shadow:var(--ombre-carte);
+  padding:2rem;
+}
+.info-panel h3{display:flex;align-items:center;gap:.6rem;margin-bottom:1.2rem;font-size:1.25rem}
+.info-panel h3 svg{width:22px;height:22px;fill:var(--terracotta)}
+.horaires{width:100%;border-collapse:collapse}
+.horaires tr{border-bottom:1px dashed rgba(46,33,26,.18)}
+.horaires tr:last-child{border-bottom:none}
+.horaires td{padding:.6rem .2rem;font-size:.97rem}
+.horaires td:first-child{font-weight:700;color:var(--bois)}
+.horaires td:last-child{text-align:right;color:var(--gris-texte)}
+.horaires tr.today td{color:var(--terracotta);font-weight:700}
+.horaires-note{margin-top:1rem;font-size:.85rem;color:var(--gris-texte);font-style:italic}
+.info-cards{display:grid;gap:1.2rem}
+.info-card{
+  background:#fff;border-radius:var(--rayon);
+  border:1px solid rgba(46,33,26,.08);box-shadow:var(--ombre-carte);
+  padding:1.5rem 1.7rem;display:flex;gap:1.1rem;align-items:flex-start;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.info-card:hover{transform:translateY(-4px);box-shadow:var(--ombre-carte-hover)}
+.info-card .ico{
+  flex:0 0 auto;width:46px;height:46px;border-radius:12px;
+  background:var(--creme-2);display:flex;align-items:center;justify-content:center;
+}
+.info-card .ico svg{width:22px;height:22px;fill:var(--olive-dark)}
+.info-card strong{display:block;color:var(--bois);font-size:1.02rem;margin-bottom:.15rem}
+.info-card p{color:var(--gris-texte);font-size:.95rem}
+.info-card a{color:var(--terracotta);font-weight:700}
+.info-card a:hover{text-decoration:underline}
+.map-wrap{
+  grid-column:1/-1;
+  border-radius:var(--rayon);overflow:hidden;
+  border:1px solid rgba(46,33,26,.1);box-shadow:var(--ombre-carte);
+  line-height:0;
+}
+.map-wrap iframe{width:100%;height:340px;border:0;display:block}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--bois);color:var(--creme)}
+.contact .kicker{color:var(--or)}
+.contact h2{color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.2rem,5vw,4rem);align-items:start}
+.contact-intro p{color:rgba(250,243,231,.85);margin-bottom:1.2rem}
+.contact-tel-card{
+  margin-top:1.8rem;
+  background:var(--bande-sombre-fort);
+  border:1px solid rgba(201,162,39,.45);
+  border-radius:var(--rayon);padding:1.6rem 1.8rem;
+}
+.contact-tel-card .libelle{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin-bottom:.5rem}
+.contact-tel-card a.tel-big{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.7rem;font-weight:700;color:#fff;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.contact-tel-card a.tel-big:hover{color:var(--or)}
+.contact-tel-card p{font-size:.88rem;color:rgba(250,243,231,.75);margin-top:.5rem}
+.contact-form{
+  background:#fff;border-radius:var(--rayon);
+  padding:2rem 1.9rem;box-shadow:0 20px 50px rgba(0,0,0,.4);
+  color:var(--encre);
+}
+.contact-form h3{margin-bottom:1.2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.form-field label{font-weight:700;font-size:.88rem;color:var(--bois)}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  font-family:inherit;font-size:.97rem;color:var(--encre);
+  background:var(--creme);border:1px solid rgba(46,33,26,.2);
+  border-radius:9px;padding:.75rem .9rem;transition:border .2s ease,box-shadow .2s ease;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  outline:none;border-color:var(--terracotta);
+  box-shadow:0 0 0 3px rgba(193,85,59,.18);
+}
+.form-field textarea{resize:vertical;min-height:110px}
+.form-note{font-size:.8rem;color:var(--gris-texte);margin:.9rem 0 1.2rem}
+.contact-form .btn{width:100%}
+.form-confirm{
+  display:none;margin-top:1rem;
+  background:rgba(107,123,78,.14);border:1px solid var(--olive);
+  color:var(--olive-dark);border-radius:9px;
+  padding:.8rem 1rem;font-size:.92rem;font-weight:600;
+}
+.form-confirm.visible{display:block}
+
+/* ---------- Footer ---------- */
+.site-footer{background:#221711;color:rgba(250,243,231,.78);font-size:.92rem}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.6rem;
+  padding:3.4rem 0 2.4rem;
+}
+.footer-grid h4{
+  font-family:'Playfair Display',Georgia,serif;
+  color:var(--creme);font-size:1.08rem;margin-bottom:1rem;
+}
+.footer-grid .logo strong{font-size:1.3rem}
+.footer-grid p{margin-top:.9rem;line-height:1.7}
+.footer-col ul{display:grid;gap:.55rem}
+.footer-col a{transition:color .2s ease}
+.footer-col a:hover{color:var(--or)}
+.footer-contact li{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.7rem}
+.footer-contact svg{width:16px;height:16px;fill:var(--or);flex:0 0 auto;margin-top:.25rem}
+.footer-bottom{
+  border-top:1px solid rgba(250,243,231,.14);
+  padding:1.2rem 0;display:flex;flex-wrap:wrap;gap:.8rem;
+  align-items:center;justify-content:space-between;
+}
+.footer-bottom small{font-size:.82rem}
+.footer-bottom .mentions{display:flex;gap:1.4rem;flex-wrap:wrap}
+.footer-bottom a:hover{color:var(--or)}
+
+/* ---------- Divers ---------- */
+.reveal-safe{opacity:1}
+.back-top{
+  position:fixed;right:1.2rem;bottom:1.2rem;z-index:900;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--terracotta);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;font-weight:700;
+  box-shadow:0 10px 24px rgba(193,85,59,.4);
+  opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;
+  transform:translateY(10px);
+}
+.back-top.visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-top:hover{background:var(--terracotta-dark)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .apropos-grid{grid-template-columns:1fr;gap:3rem}
+  .apropos-media{max-width:520px;margin-inline:auto}
+  .infos-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .main-nav{display:none}
+  .burger{display:block}
+  .header-tel .tel-label{display:none}
+  .header-tel .tel-link{padding:.55rem .8rem}
+  .galerie-grid{grid-template-columns:repeat(2,1fr)}
+  .galerie-grid figure.large{grid-row:span 1;aspect-ratio:4/3}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero{min-height:92vh}
+  .hero-band{padding:2rem 1.3rem}
+  .hero-actions .btn{width:100%}
+  .spec-grid{grid-template-columns:1fr}
+  .galerie-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .avis-resume{padding:1.2rem 1.3rem;text-align:center;flex-direction:column}
+  .apropos-badge{right:0}
+  .section{padding:3.4rem 0}
+}
+</style>
+</head>
+<body>
+
+<div class="top-strip">
+  <span class="stars">★★★★★</span>
+  <strong>4,8/5</strong> sur Google · plus de 1 100 avis · terrasse ombragée face à la fontaine du vieux village
+</div>
+
+<header class="site-header" id="haut">
+  <input type="checkbox" id="nav-toggle" aria-hidden="true">
+  <div class="header-inner container">
+    <div class="logo">
+      <a href="#hero" aria-label="Le Marina — retour à l'accueil">
+        <strong>Le <span>Marina</span></strong>
+        <small>Montauroux · Pays de Fayence</small>
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#apropos">Le restaurant</a></li>
+        <li><a href="#specialites">Nos spécialités</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#infos">Infos pratiques</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-tel">
+      <a class="tel-link" href="tel:+33494764333">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="tel-label">Réserver — 04 94 76 43 33</span>
+      </a>
+    </div>
+    <label class="burger" for="nav-toggle" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</header>
+
+<section id="hero" class="hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Table dressée d'un restaurant provençal : assiettes soignées, verres à vin et pain artisanal sous une lumière chaleureuse" loading="eager">
+  </div>
+  <div class="hero-band">
+    <span class="hero-kicker">Cuisine provençale · Fait maison</span>
+    <h1>Le Marina — <span class="accent">Table provençale</span> au cœur de Montauroux</h1>
+    <p>Au 2, rue de la Rouguière, au creux du vieux village perché de Montauroux, notre terrasse ombragée borde la fontaine de la rue pavée. Ici, la cuisine est soignée, sincère et tout entière tournée vers la Provence : produits du pays de Fayence, recettes de famille, accueil comme à la maison.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#specialites">Découvrir la carte</a>
+      <a class="btn btn-outline" href="tel:+33494764333">Réserver — 04 94 76 43 33</a>
+    </div>
+    <span class="hero-note"><span class="stars">★★★★★</span> 4,8/5 — plus de 1 100 avis Google</span>
+  </div>
+  <a class="hero-scroll" href="#specialites">Découvrir</a>
+</section>
+
+<section id="specialites" class="section specialites">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">La carte du marché</span>
+      <h2>Nos spécialités</h2>
+      <p>Des plats généreux, ancrés dans la tradition provençale, préparés chaque jour avec les produits des producteurs du pays de Fayence.</p>
+      <div class="ornament"><span>✦</span></div>
+    </div>
+    <div class="spec-grid">
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Classique maison</span>
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Daube de bœuf mijotée, sauce brune onctueuse servie avec ses garnitures du marché" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>La daube à la provençale</h3>
+          <p>Le bœuf marine la veille au vin rouge des coteaux varois, puis mijote des heures avec carottes, olives et bouquet garni. Servie avec la polenta crémeuse de la maison ou des pâtes fraîches : le plat réconfort par excellence.</p>
+          <span class="spec-lien">La star de l'hiver</span>
+        </div>
+      </article>
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Pêche du jour</span>
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Poisson de roche grillé servi entier avec herbes fraîches, citron et huile d'olive" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>Poissons de roche</h3>
+          <p>Rascasse, rouget ou daurade royale selon la pêche des criées varoises : grillés entiers au four, nappés d'un filet d'huile d'olive du pays de Fayence, accompagnés de légumes de saison. Simple, juste, délicieux.</p>
+          <span class="spec-lien">Selon l'arrivage</span>
+        </div>
+      </article>
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Tradition</span>
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Gardianne de taureau à la sauce brune, servie dans une assiette rustique avec pommes de terre" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>La gardianne de taureau</h3>
+          <p>Taureau de Camargue mariné au vin et aux herbes de la garrigue, mijoté lentement jusqu'à devenir fondant, servi avec sa sauce onctueuse et des pommes de terre sautées à l'ail. Un condensé de Provence dans l'assiette.</p>
+          <span class="spec-lien">Recette de la Camargue</span>
+        </div>
+      </article>
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Grand aïoli</span>
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Assortiment de légumes frais du marché croquants et colorés dressés avec soin" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>L'aïoli garni</h3>
+          <p>Notre aïoli est monté au mortier, à l'ancienne, à l'ail frais du marché. Il accompagne morue dessalée, œufs durs, légumes croquants cuits juste ce qu'il faut et pommes de terre vapeur : le déjeuner dominical provençal par excellence.</p>
+          <span class="spec-lien">Monté au mortier</span>
+        </div>
+      </article>
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Chaque jour</span>
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Assiettes du marché variées dressées sur une table de restaurant, présentation soignée et colorée" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>Les légumes du marché</h3>
+          <p>Chaque matin, nous choisissons les récoltes des maraîchers du pays de Fayence : tomates anciennes, tian d'aubergines et courges confites, ratatouille du jour. La Provence se déguste aussi en légumes.</p>
+          <span class="spec-lien">Producteurs locaux</span>
+        </div>
+      </article>
+
+      <article class="spec-card">
+        <div class="spec-media">
+          <span class="spec-tag">Fait maison</span>
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Dessert maison dressé avec soin, présentation élégante avec coulis et garniture gourmande" loading="eager">
+        </div>
+        <div class="spec-body">
+          <h3>Les desserts maison</h3>
+          <p>Tout est préparé dans notre cuisine : tarte aux figues et amandes selon la saison, crème brûlée parfumée à la lavande, et l'incontournable tropézienne venue de chez nos voisines de Saint-Tropez. La touche sucrée du repas.</p>
+          <span class="spec-lien">Préparés chaque matin</span>
+        </div>
+      </article>
+
+    </div>
+    <p class="spec-note"><strong>La carte évolue au fil des saisons et des arrivages.</strong> Nos formules du jour et suggestions sont affichées à la terrasse — appelez-nous pour connaître le plat du moment : 04 94 76 43 33.</p>
+  </div>
+</section>
+
+<section id="apropos" class="section apropos">
+  <div class="container apropos-grid">
+    <div class="apropos-media">
+      <img class="photo-main" src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Terrasse ombragée d'un restaurant de village avec tables dressées sous les plantes et la pierre ancienne" loading="eager">
+      <img class="photo-small" src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Campagne provençale ensoleillée aux tons de lavande et d'ocres, paysage du pays de Fayence" loading="eager">
+      <div class="apropos-badge">
+        <span class="note">4,8<small class="sur">/5</small></span>
+        <div class="etoiles">★★★★★</div>
+        <span class="nb-avis">1 100+ avis Google</span>
+      </div>
+    </div>
+    <div class="apropos-text">
+      <span class="kicker">Bienvenue au Marina</span>
+      <h2>Le restaurant</h2>
+      <p>Montauroux se découvre en montant : ruelles étroites, volets aux couleurs passées, place ombragée, et au détour d'une rue pavée, la fontaine qui murmure depuis toujours. C'est là, au 2 de la rue de la Rouguière, que Le Marina vous attend, au cœur du vieux village perché qui domine le lac de Saint-Cassien et les collines du pays de Fayence.</p>
+      <p>A l'intérieur, la salle à manger conjugue la douceur des maisons de village : pierres apparentes, bois patiné, nappes soignées et lumière tamisée. On s'y attarde, on y célèbre les retrouvailles comme les grandes occasions. Dehors, la terrasse fleurie s'étire le long de la fontaine, à l'abri du soleil — la table préférée de nos habitués, du café du matin au dernier service du soir.</p>
+      <ul class="apropos-points">
+        <li>Une cuisine maison, préparée chaque jour à partir de produits frais et de producteurs locaux</li>
+        <li>Une terrasse ombragée face à la fontaine, sur la rue pavée du vieux village</li>
+        <li>Une équipe attentive qui reçoit chaque convive « comme à la maison »</li>
+      </ul>
+      <p>Depuis des années, les visiteurs de passage comme les habitants du village nous confient leurs déjeuners, leurs dîners et leurs fêtes de famille. Si votre route vous mène entre Saint-Cassien et Fayence, poussez la porte : la Provence vous réserve une table.</p>
+      <p class="apropos-signature">« Ici, on ne reçoit pas des clients, on reçoit des invités. »<small>— Toute l'équipe du Marina</small></p>
+    </div>
+  </div>
+</section>
+<!-- ==================== PARTIE 2 — Le Marina (suite du body) : galerie, avis, infos, contact, footer ==================== -->
+
+<!-- ---------- Galerie « En images » ---------- -->
+<section id="galerie" class="section galerie">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">En images</span>
+      <h2>Le Marina en photos</h2>
+      <p>La terrasse à l'ombre de la fontaine, la salle aux pierres apparentes, les plats qui sortent de notre cuisine et le vieux village qui nous entoure : un avant-goût de votre prochaine visite.</p>
+      <div class="ornament"><span>✦</span></div>
+    </div>
+    <div class="galerie-grid">
+
+      <figure class="large">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Terrasse d'un restaurant de village avec tables dressées, chaises confortables et plantes vertes à l'ombre" loading="eager">
+        <figcaption>La terrasse ombragée, face à la fontaine de la rue de la Rouguière</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Assiette généreuse de viande mijotée et légumes de saison, sauce nappée avec soin" loading="eager">
+        <figcaption>Plats généreux, cuisson lente, produits du pays de Fayence</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Salle de restaurant chaleureuse avec tables nappées, chaises en bois et lumière tamisée" loading="eager">
+        <figcaption>La salle intérieure : pierres apparentes et bois patiné</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Vieux village perché provençal aux maisons ocres et ruelles étroites, sous le soleil" loading="eager">
+        <figcaption>Montauroux, village perché au-dessus du lac de Saint-Cassien</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Ruelle pavée d'un village de Provence bordée de maisons anciennes aux volets colorés" loading="eager">
+        <figcaption>Les rues pavées du vieux village, à deux pas de notre porte</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Tablée de convives autour d'un repas festif dans un restaurant, verres levés et ambiance chaleureuse" loading="eager">
+        <figcaption>Les tables de famille et les fêtes, notre plus belle spécialité</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Avis clients ---------- -->
+<section id="avis" class="section avis">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Ils sont passés à table</span>
+      <h2>Ce que disent nos clients</h2>
+      <p>Les habitués du village comme les vacanciers de passage laissent leurs impressions sur Google — voici le genre de mots qui nous font plaisir.</p>
+      <div class="ornament"><span>✦</span></div>
+    </div>
+
+    <div class="avis-resume">
+      <span class="note">4,8<small>/5</small></span>
+      <div>
+        <div class="etoiles">★★★★★</div>
+        <span class="logo-google">Basé sur plus de 1 100 avis Google</span>
+      </div>
+      <p class="texte">Une adresse de village qui fidélise : <strong>la cuisine, la terrasse et l'accueil</strong> reviennent dans presque tous les commentaires.</p>
+    </div>
+
+    <div class="avis-grid">
+
+      <article class="avis-card">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>Déjeuner sur la terrasse face à la fontaine, un vrai moment de Provence. La daube est fondante comme on ne la fait plus chez nous, et le service est d'une gentillesse rare. Nous reviendrons dès que nous remontons dans le pays de Fayence.</blockquote>
+        <div class="auteur">
+          <span class="avatar">S</span>
+          <div>
+            <strong>Sophie M.</strong>
+            <small>Avis Google — déjeuner en famille</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="avis-card">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>Un accueil chaleureux, une carte qui change au fil des saisons et des produits vraiment frais. J'ai pris le poisson de roche entier : cuit à la perfection, simplement accompagné, exactement ce qu'on cherche dans un restaurant de village. Rapport qualité-prix imbattable.</blockquote>
+        <div class="auteur">
+          <span class="avatar t2">T</span>
+          <div>
+            <strong>Thomas B.</strong>
+            <small>Avis Google — dîner entre amis</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="avis-card">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>Les plats sont préparés maison, ça se sent dès la première bouchée. Le tout, servi sur une place ombragée du vieux village, avec la fontaine qui chante en fond. Un régal pour les papilles comme pour les yeux. Mention spéciale pour la tropézienne !</blockquote>
+        <div class="auteur">
+          <span class="avatar t3">C</span>
+          <div>
+            <strong>Catherine R.</strong>
+            <small>Avis Google — habituée du village</small>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="spec-note">Exemples à remplacer par vos vrais avis Google</p>
+  </div>
+</section>
+
+<!-- ---------- Infos pratiques ---------- -->
+<section id="infos" class="section infos">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Nous trouver</span>
+      <h2>Infos pratiques</h2>
+      <p>Au cœur du vieux village de Montauroux, entre Fayence et le lac de Saint-Cassien — l'adresse ne s'oublie pas une fois qu'on l'a trouvée.</p>
+      <div class="ornament"><span>✦</span></div>
+    </div>
+
+    <div class="infos-grid">
+
+      <div class="info-panel">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Adresse &amp; horaires
+        </h3>
+        <table class="horaires">
+          <tr>
+            <td>Adresse</td>
+            <td>2 rue de la Rouguière<br>83440 Montauroux</td>
+          </tr>
+          <tr>
+            <td>Téléphone</td>
+            <td><a href="tel:+33494764333">04 94 76 43 33</a></td>
+          </tr>
+          <tr>
+            <td>Horaires</td>
+            <td>contactez-nous au <a href="tel:+33494764333">04 94 76 43 33</a></td>
+          </tr>
+          <tr>
+            <td>Réservation</td>
+            <td>conseillée en saison, surtout pour la terrasse</td>
+          </tr>
+        </table>
+        <p class="horaires-note">Nous mettons volontiers la terrasse à votre disposition pour vos repas de famille, anniversaires et tables de fêtes : appelez-nous pour organiser votre événement.</p>
+      </div>
+
+      <div class="info-cards">
+
+        <div class="info-card">
+          <span class="ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 11a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 15.5 11zm-9-2a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm9 6c-3 0-9 1.5-9 4.5V22h18v-2.5c0-3-6-4.5-9-4.5zm-9 .9c-.9.2-1.8.5-2.6.9C2.1 17.6 1 18.7 1 20.1V22h4v-3.1a6.6 6.6 0 0 1 .5-3z"/></svg>
+          </span>
+          <div>
+            <strong>Vieux village piéton</strong>
+            <p>Le Marina se situe dans les ruelles pavées du village perché. La promenade se fait à pied : comptez deux minutes de marche depuis les places du bas du village, la fontaine de la rue de la Rouguière sert de repère.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.5-4.5h11L19 11h1a2 2 0 0 1 2 2v4h-2a2 2 0 1 1-4 0H8a2 2 0 1 1-4 0H2v-4a2 2 0 0 1 2-2zm2.1 0h9.8l-.9-2.5H8z"/></svg>
+          </span>
+          <div>
+            <strong>Parkings à proximité</strong>
+            <p>Plusieurs parkings gratuits et payants se trouvent à proximité immédiate du village, à quelques minutes à pied des rues pavées. En été, venez un peu en avance : le village vit au rythme des marchés et des promeneurs.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"/></svg>
+          </span>
+          <div>
+            <strong>Le bon moment</strong>
+            <p>Le déjeuner sur la terrasse est le rendez-vous des habitués ; le soir, le village redescend la lumière et la fontaine accompagne les dîners. Aux beaux jours, la table la plus proche de la fontaine part vite : réservez-la au 04 94 76 43 33.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="map-wrap">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" alt="Place ombragée d'un village provençal avec fontaine ancienne, tables de café et maisons anciennes" loading="eager">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Contact ---------- -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Réserver une table</span>
+      <h2>Nous contacter</h2>
+      <p>Un déjeuner en famille, une soirée entre amis, une grande tablée à organiser ? Un coup de fil suffit, on s'occupe du reste.</p>
+      <div class="ornament"><span>✦</span></div>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-intro">
+        <p>Bienvenue au Marina ! Que ce soit pour deux couverts à l'ombre de la fontaine ou pour une table de fête au cœur du village, nous vous préparons un accueil comme à la maison. Appelez-nous directement : nous vous confirmons tout de suite la disponibilité, la terrasse et le plat du jour.</p>
+        <p>Pour les groupes et les repas de famille, dites-nous simplement l'occasion : nous dressons la table, nous conseillons la carte et nous réservons le meilleur emplacement. À très vite sur la place du vieux village !</p>
+        <div class="contact-tel-card">
+          <div class="libelle">Réservation par téléphone</div>
+          <a class="tel-big" href="tel:+33494764333">
+            <svg viewBox="0 0 24 24" aria-hidden="true" style="width:24px;height:24px;fill:currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            04 94 76 43 33
+          </a>
+          <p>On vous répond en personne, du mardi au service du soir — et on garde la meilleure table pour vous.</p>
+        </div>
+      </div>
+
+      <div class="contact-cta contact-form">
+        <h3>Le plus simple : un appel</h3>
+        <p style="color:var(--gris-texte);margin-bottom:1.4rem">Pas de formulaire, pas d'attente : la réservation se fait directement par téléphone, comme au village. Présentez-vous au 2 rue de la Rouguière, la fontaine vous guidera.</p>
+        <a class="btn btn-primary" href="tel:+33494764333">
+          <svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;fill:currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          Appeler le Marina — 04 94 76 43 33
+        </a>
+        <p class="form-note" style="margin-top:1.2rem">Nous sommes là pour vous accueillir : adressez-vous à toute l'équipe, en salle comme en terrasse, pour toute demande particulière (allergies, enfants, grandes tablées).</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <strong>Le <span>Marina</span></strong>
+          <small>Montauroux · Pays de Fayence</small>
+        </div>
+        <p>Table provençale au cœur du vieux village de Montauroux. Cuisine maison, terrasse ombragée face à la fontaine de la rue de la Rouguière, et l'accueil d'une maison de famille.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Le restaurant</h4>
+        <ul>
+          <li><a href="#apropos">Le restaurant</a></li>
+          <li><a href="#specialites">Nos spécialités</a></li>
+          <li><a href="#galerie">En images</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="#infos">Infos pratiques</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <span>2 rue de la Rouguière<br>83440 Montauroux</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            <span><a href="tel:+33494764333">04 94 76 43 33</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>Le Marina — 2 rue de la Rouguière, 83440 Montauroux · <a href="tel:+33494764333">04 94 76 43 33</a></small>
+      <div class="mentions">
+        <small>Maquette d'idée — photos d'illustration libres de droits</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
